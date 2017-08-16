@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, xtagwgj" />
+  <meta name="keywords" content="Android Studio,Gradle," />
 
 
 
@@ -90,15 +90,17 @@
 
 
 
-<meta name="description" content="命运负责洗牌，但是玩牌的却是我们自己！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xtagwgj的个人博客">
-<meta property="og:url" content="https://xtagwgj.github.io/index.html">
+<meta name="description" content="Gradle配置的完整文件下面的就是Module级别下的配置文件，可以根据自己的需要自行修改删除 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980">
+<meta name="keywords" content="Android Studio,Gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gradle配置">
+<meta property="og:url" content="https://xtagwgj.github.io/2017/08/16/Gradle配置/index.html">
 <meta property="og:site_name" content="Xtagwgj的个人博客">
-<meta property="og:description" content="命运负责洗牌，但是玩牌的却是我们自己！">
+<meta property="og:description" content="Gradle配置的完整文件下面的就是Module级别下的配置文件，可以根据自己的需要自行修改删除 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980">
+<meta property="og:updated_time" content="2017-08-16T06:23:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xtagwgj的个人博客">
-<meta name="twitter:description" content="命运负责洗牌，但是玩牌的却是我们自己！">
+<meta name="twitter:title" content="Gradle配置">
+<meta name="twitter:description" content="Gradle配置的完整文件下面的就是Module级别下的配置文件，可以根据自己的需要自行修改删除 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://xtagwgj.github.io/"/>
+  <link rel="canonical" href="https://xtagwgj.github.io/2017/08/16/Gradle配置/"/>
 
 
 
 
 
-  <title>Xtagwgj的个人博客</title>
+  <title>Gradle配置 | Xtagwgj的个人博客</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -157,9 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -262,9 +262,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -290,9 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/16/Gradle配置/" itemprop="url">Gradle配置</a></h1>
+          <h1 class="post-title" itemprop="name headline">Gradle配置</h1>
         
 
         <div class="post-meta">
@@ -361,9 +359,7 @@
       
 
       
-        
-          
-            <h3 id="Gradle配置的完整文件"><a href="#Gradle配置的完整文件" class="headerlink" title="Gradle配置的完整文件"></a>Gradle配置的完整文件</h3><p>下面的就是Module级别下的配置文件，可以根据自己的需要自行修改删除</p>
+        <h3 id="Gradle配置的完整文件"><a href="#Gradle配置的完整文件" class="headerlink" title="Gradle配置的完整文件"></a>Gradle配置的完整文件</h3><p>下面的就是Module级别下的配置文件，可以根据自己的需要自行修改删除</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//第一行代码应用了Android 程序的gradle插件，作为Android 的应用程序，这一步是必须的</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.android.application'</span></div><div class="line"><span class="comment">//如果我们要写一个library项目让其他的项目引用,就要改为library</span></div><div class="line"><span class="comment">//apply plugin: 'com.android.library'</span></div><div class="line"></div><div class="line"></div><div class="line">android &#123;</div><div class="line">    compileSdkVersion <span class="number">25</span></div><div class="line">    buildToolsVersion <span class="string">"25.0.1"</span></div><div class="line"></div><div class="line">    defaultConfig &#123;</div><div class="line">        applicationId <span class="string">"com.xxx.xx"</span></div><div class="line">        minSdkVersion <span class="number">19</span></div><div class="line">        targetSdkVersion <span class="number">22</span></div><div class="line">        versionCode <span class="number">11</span></div><div class="line">        versionName <span class="string">"2.0.1"</span></div><div class="line">        multiDexEnabled <span class="literal">true</span></div><div class="line"></div><div class="line">        <span class="comment">//全局配置的key，在manifest中使用，如果buildTypes中未配置，则使用该处的值，否则替换</span></div><div class="line">        manifestPlaceholders = [</div><div class="line"><span class="symbol">                BAIDU_API_KEY:</span> <span class="string">"key"</span>,</div><div class="line">        ]</div><div class="line"></div><div class="line">        <span class="comment">//设置支持的SO库架构</span></div><div class="line">        ndk &#123;</div><div class="line">            <span class="comment">//显示指定支持的ABIs</span></div><div class="line">            abiFilters <span class="string">'armeabi-v7a'</span>, <span class="string">'armeabi'</span>, <span class="string">'x86'</span>, <span class="string">'arm64-v8a'</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//只保留xhdpi和xxhdpi文件夹厦门的资源文件</span></div><div class="line">        resConfigs <span class="string">"xhdpi"</span>, <span class="string">"xxhdpi"</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            <span class="comment">//动态修改app名称</span></div><div class="line">            resValue <span class="string">"string"</span>, <span class="string">"app_name"</span>, <span class="string">"app_name"</span></div><div class="line"></div><div class="line">            <span class="comment">//正式服务器地址相关</span></div><div class="line">            buildConfigField <span class="string">"String"</span>, <span class="string">"PROPERTY_URL"</span>, <span class="string">"\"https://xxx.com\""</span></div><div class="line"></div><div class="line">            manifestPlaceholders = [</div><div class="line"><span class="symbol">                    JPUSH_APPKEY:</span> <span class="string">"key"</span>, <span class="comment">//公网JPush上注册的包名对应的appkey.</span></div><div class="line">            ]</div><div class="line"></div><div class="line">            <span class="comment">//是否进行混淆</span></div><div class="line">            minifyEnabled <span class="literal">true</span></div><div class="line">            <span class="comment">//是否支持zip</span></div><div class="line">            zipAlignEnabled <span class="literal">true</span></div><div class="line">            <span class="comment">//删除无用资源</span></div><div class="line">            shrinkResources <span class="literal">true</span></div><div class="line">            <span class="comment">//是否支持调试</span></div><div class="line">            debuggable <span class="literal">false</span></div><div class="line">            <span class="comment">//关闭jni调试</span></div><div class="line">            jniDebuggable <span class="literal">false</span></div><div class="line">            proguardFiles getDefaultProguardFile(<span class="string">'proguard-android.txt'</span>), <span class="string">'proguard-rules.pro'</span></div><div class="line">            <span class="comment">//加载签名文件</span></div><div class="line">            signingConfig signinfConfigs.release</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        debug &#123;</div><div class="line">            <span class="comment">//动态修改app名称</span></div><div class="line">            resValue <span class="string">"string"</span>, <span class="string">"app_name"</span>, <span class="string">"app_name"</span></div><div class="line"></div><div class="line">            <span class="comment">//测试服务器地址相关</span></div><div class="line">            buildConfigField <span class="string">"String"</span>, <span class="string">"PROPERTY_URL"</span>, <span class="string">"\"http://xxxx:8080\""</span></div><div class="line"></div><div class="line">            manifestPlaceholders = [</div><div class="line"><span class="symbol">                    JPUSH_APPKEY:</span> <span class="string">"key"</span>, <span class="comment">//测试JPush的key</span></div><div class="line">            ]</div><div class="line"></div><div class="line">            <span class="comment">//是否进行混淆</span></div><div class="line">            minifyEnabled <span class="literal">true</span></div><div class="line">            <span class="comment">//是否支持zip</span></div><div class="line">            zipAlignEnabled <span class="literal">true</span></div><div class="line">            <span class="comment">//删除无用资源</span></div><div class="line">            shrinkResources <span class="literal">false</span></div><div class="line">            proguardFiles getDefaultProguardFile(<span class="string">'proguard-android.txt'</span>), <span class="string">'proguard-rules.pro'</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//Java 的版本配置</span></div><div class="line">    compileOptions &#123;</div><div class="line">        sourceCompatibility JavaVersion.VERSION_1_7</div><div class="line">        targetCompatibility JavaVersion.VERSION_1_7</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//默认的一些文件路径的配置</span></div><div class="line">    sourceSets &#123;</div><div class="line">        main &#123;</div><div class="line">            assets.srcDirs = [<span class="string">'assets'</span>]    <span class="comment">//资源文件</span></div><div class="line">            jni.srcDirs <span class="string">'src/main/jni'</span>     <span class="comment">//jni文件</span></div><div class="line">            jniLibs.srcDir <span class="string">'src/main/jniLibs'</span> <span class="comment">//jni库</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    repositories &#123;</div><div class="line">        maven &#123;</div><div class="line">            url <span class="string">"http://repo.acmecorp.com/maven2"</span></div><div class="line">            <span class="comment">//如果仓库有密码，也可以同时传入用户名和密码</span></div><div class="line">            credentials &#123;</div><div class="line">                username <span class="string">'user'</span></div><div class="line">                password <span class="string">'secretPassword'</span></div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        flatDir &#123;</div><div class="line">            dirs <span class="string">'aars'</span> <span class="comment">//就是你放aar的目录地址</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//签名文件配置</span></div><div class="line">    signinfConfigs &#123;</div><div class="line"></div><div class="line">        release &#123;</div><div class="line">            storeFile file(<span class="string">"release.keystore"</span>)</div><div class="line">            storePassword <span class="string">"your keystore password"</span></div><div class="line">            keyAlias <span class="string">"your keystore alias"</span></div><div class="line">            keyPassword <span class="string">"your alias password"</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//multiDex的一些相关配置，这样配置可以让你的编译速度更快</span></div><div class="line">    dexOptions &#123;</div><div class="line">        <span class="comment">//让它不要对Lib做preDexing</span></div><div class="line">        preDexLibraries = <span class="literal">false</span></div><div class="line">        <span class="comment">//开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的。</span></div><div class="line">        incremental <span class="literal">true</span></div><div class="line">        <span class="comment">//增加java堆内存大小</span></div><div class="line">        javaMaxHeapSize <span class="string">"4g"</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//程序在编译的时候会检查lint，有任何错误提示会停止build，我们可以关闭这个开关</span></div><div class="line">    lintOptions &#123;</div><div class="line">        <span class="comment">//即使报错也不会停止打包</span></div><div class="line">        abortOnError <span class="literal">false</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    packagingOptions &#123;</div><div class="line">        exclude <span class="string">'META-INF/LICENSE'</span></div><div class="line">        exclude <span class="string">'META-INF/NOTICE'</span></div><div class="line">        exclude <span class="string">'META-INF/LICENSE.txt'</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//修改输出apk包的文件名</span></div><div class="line">    android.applicationVariants.all &#123; variant -&gt;</div><div class="line">        variant.outputs.each &#123; output -&gt;</div><div class="line">            output.outputFile = <span class="keyword">new</span> File(</div><div class="line">                    output.outputFile.parent,</div><div class="line">                    <span class="string">"xxx_"</span> + <span class="string">"_"</span> + buildType.name + <span class="string">"_v"</span> + defaultConfig.versionName + <span class="string">".apk"</span></div><div class="line">            );</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line">    <span class="comment">//引用所有的jar包</span></div><div class="line">    compile fileTree(<span class="string">include:</span> [<span class="string">'*.jar'</span>], <span class="string">dir:</span> <span class="string">'libs'</span>)</div><div class="line">    androidTestCompile(<span class="string">'com.android.support.test.espresso:espresso-core:2.2.2'</span>, &#123;</div><div class="line">        exclude <span class="string">group:</span> <span class="string">'com.android.support'</span>, <span class="string">module:</span> <span class="string">'support-annotations'</span></div><div class="line">    &#125;)</div><div class="line">    compile <span class="string">'com.android.support:appcompat-v7:25.0.0'</span></div><div class="line">    <span class="comment">//引用aar文件</span></div><div class="line">    compile(<span class="string">name:</span> <span class="string">'openVideo-release'</span>, <span class="string">ext:</span> <span class="string">'aar'</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第三方依赖库的本地缓存路径</span></div><div class="line">task showMeCache &lt;&lt; &#123;</div><div class="line">    configurations.compile.each &#123; println it &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在上面我们可以看到在<code>defaultConfig</code>和<code>dependencies</code>下面写明了具体的minSdkVersion或是第三方依赖等信息的版本号，在单个module中或许是比较方便，但是如果有多个module，此时要保证各个module依赖的统一性就比较麻烦。为了解决这个问题，我们可以在project的目录下改成统一的配置，让后面的module都使用该配置下的版本号。</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line"><span class="comment">//第一种方式</span></div><div class="line">    ext.kotlin_version = <span class="string">'1.1.3-2'</span></div><div class="line">    ext.anko_version = <span class="string">'0.10.1'</span></div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public'</span>&#125;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    dependencies &#123;</div><div class="line">        classpath <span class="string">'com.android.tools.build:gradle:3.0.0-beta2'</span></div><div class="line">        classpath <span class="string">"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"</span></div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">allprojects &#123;</div><div class="line"></div><div class="line">    repositories &#123;</div><div class="line">        maven&#123; url <span class="string">'http://maven.aliyun.com/nexus/content/groups/public'</span>&#125;</div><div class="line">        jcenter()</div><div class="line">        maven &#123; url <span class="string">"https://jitpack.io"</span> &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">task clean(<span class="string">type:</span> Delete) &#123;</div><div class="line">    delete rootProject.buildDir</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第二种方式</span></div><div class="line">ext &#123;</div><div class="line">    config = [</div><div class="line"><span class="symbol">            buildToolsVersion:</span> <span class="string">"25.0.2"</span>,</div><div class="line">            <span class="string">compileVersion   :</span> <span class="number">25</span>,</div><div class="line">            <span class="string">minSdkVersion    :</span> <span class="number">21</span>,</div><div class="line">            <span class="string">targetVersion    :</span> <span class="number">25</span>,</div><div class="line">            <span class="string">versionCode      :</span> <span class="number">1</span>,</div><div class="line">            <span class="string">versionName      :</span> <span class="string">"1.0"</span>,</div><div class="line">            <span class="string">packageName      :</span> <span class="string">"com.xx.xxx"</span>,</div><div class="line">    ]</div><div class="line"></div><div class="line">    lib = [</div><div class="line">            <span class="string">support_version :</span> <span class="string">"25.3.0"</span>,</div><div class="line">            <span class="string">networking      :</span> <span class="string">"1.0.0"</span>,</div><div class="line">            <span class="string">flyco           :</span> <span class="string">"2.1.2@aar"</span>,</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -375,362 +371,74 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">def</span> cfg = rootProject.ext.config</div><div class="line"><span class="keyword">def</span> libs = rootProject.ext.lib</div><div class="line"></div><div class="line">android &#123;</div><div class="line"> 	</div><div class="line"> 	compileSdkVersion cfg.compileVersion</div><div class="line">    buildToolsVersion cfg.buildToolsVersion</div><div class="line"></div><div class="line">    defaultConfig &#123;</div><div class="line">        applicationId cfg.packageName</div><div class="line">        minSdkVersion cfg.minSdkVersion</div><div class="line">        targetSdkVersion cfg.targetVersion</div><div class="line">        versionCode cfg.versionCode</div><div class="line">        versionName cfg.versionName</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dependencies &#123;</div><div class="line"> 	compile <span class="string">"com.amitshekhar.android:android-networking:$&#123;libs.networking&#125;"</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure></li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://xtagwgj.github.io/2017/05/05/使用Hexo在Github上搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xtagwgj">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xtagwgj的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/05/使用Hexo在Github上搭建个人博客/" itemprop="url">使用Hexo在Github上搭建个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T10:21:17+08:00">
-                2017-05-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Android-Studio/" rel="tag"># Android Studio</a>
           
-
+            <a href="/tags/Gradle/" rel="tag"># Gradle</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="安装的前提"><a href="#安装的前提" class="headerlink" title="安装的前提"></a>安装的前提</h2><p>安装 Hexo 相当简单，然而在安装前，你必须检查电脑中是否已经安装了下列应用程序</p>
-<blockquote>
-<p> Node<br> Git</p>
-</blockquote>
-<h2 id="快速安装"><a href="#快速安装" class="headerlink" title="快速安装"></a>快速安装</h2><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><ul>
-<li>所以的必备程序都安装后，即可使用 <code>npm</code> 安装 <code>Hexo</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><ul>
-<li>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="配置-Github"><a href="#配置-Github" class="headerlink" title="配置 Github"></a>配置 Github</h3><ul>
-<li>在Github上建立与用户名相对应的仓库，仓库名必须为【your_user_name.github.io】这种形式</li>
-<li>创立仓库成功后打开<code>&lt;folder&gt;</code>文件夹，找到<code>_config.yml</code></li>
-<li><p>移动到文本的最下方，修改内容为(使用https时会要求输入Github的用户名和密码)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;仓库的https或ssh地址&gt;</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行命令保存配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行配置命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-<li><p>然后在浏览器中输入 <a href="http://your_user_name.github.io/" target="_blank" rel="external">http://your_user_name.github.io/</a> 就行了</p>
-</li>
-</ul>
-<h2 id="部署的步骤"><a href="#部署的步骤" class="headerlink" title="部署的步骤"></a>部署的步骤</h2><ul>
-<li><p>清除缓存</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure>
-</li>
-<li><p>生成静态网页</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-</li>
-<li><p>部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h2><ul>
-<li><p>新建文章：您可以在命令中指定文章的布局（layout），默认为 <code>post</code>，可以通过修改 <code>_config.yml</code> 中的 <code>default_layout</code> 参数来指定默认布局。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>新建页面：新建一个新的比如分类，关于等的页面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page <span class="string">"pageName"</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>生成静态页面至public目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-</li>
-<li><p>开启本地服务器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-</li>
-<li><p>部署到GitHub</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-<li><p>帮助</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo <span class="built_in">help</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><blockquote>
-<ul>
-<li>具体的配置查看 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT</a> 和 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo</a></li>
-<li>部分内容参考这篇文章 <a href="http://baixin.io/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="external">HEXO搭建个人博客</a></li>
-<li>最开始使用 <code>SourceTree</code> 上传文件，但都出现Page build failure错误，后来使用 <code>HEXO搭建个人博客</code> 的方法成功创建博客</li>
-<li>本文只记录了 <code>Mac</code> 下布置博客的步骤，其他平台未验证</li>
-</ul>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://xtagwgj.github.io/2017/05/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xtagwgj">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xtagwgj的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/05/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T09:28:30+08:00">
-                2017-05-05
-              </time>
+              <a href="/2017/05/05/使用Hexo在Github上搭建个人博客/" rel="next" title="使用Hexo在Github上搭建个人博客">
+                <i class="fa fa-chevron-left"></i> 使用Hexo在Github上搭建个人博客
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -738,6 +446,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODUyNS81MDk2"></div>
+    
+  </div>
+
 
         </div>
         
@@ -757,8 +471,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -820,6 +543,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradle配置的完整文件"><span class="nav-number">1.</span> <span class="nav-text">Gradle配置的完整文件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -940,6 +679,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
@@ -974,6 +717,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
