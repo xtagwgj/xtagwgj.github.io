@@ -1,0 +1,771 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,DataBinding," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="其他的用法include 通过使用application namespace以及在属性中的Variable名字从容器layout中传递Variables到一个被包含的layout  Activity的XML1234567891011121314151617181920212223242526272829303132&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=">
+<meta name="keywords" content="Android,DataBinding">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DataBinding(3) 其他用法">
+<meta property="og:url" content="https://xtagwgj.github.io/2017/08/28/DataBinding-3-其他用法/index.html">
+<meta property="og:site_name" content="Xtagwgj的个人博客">
+<meta property="og:description" content="其他的用法include 通过使用application namespace以及在属性中的Variable名字从容器layout中传递Variables到一个被包含的layout  Activity的XML1234567891011121314151617181920212223242526272829303132&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=">
+<meta property="og:updated_time" content="2017-08-28T08:11:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DataBinding(3) 其他用法">
+<meta name="twitter:description" content="其他的用法include 通过使用application namespace以及在属性中的Variable名字从容器layout中传递Variables到一个被包含的layout  Activity的XML1234567891011121314151617181920212223242526272829303132&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xtagwgj.github.io/2017/08/28/DataBinding-3-其他用法/"/>
+
+
+
+
+
+  <title>DataBinding(3) 其他用法 | Xtagwgj的个人博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xtagwgj的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://xtagwgj.github.io/2017/08/28/DataBinding-3-其他用法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xtagwgj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xtagwgj的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">DataBinding(3) 其他用法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T09:45:41+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="其他的用法"><a href="#其他的用法" class="headerlink" title="其他的用法"></a>其他的用法</h1><h2 id="include"><a href="#include" class="headerlink" title="include"></a>include</h2><blockquote>
+<p>通过使用application namespace以及在属性中的Variable名字从容器layout中传递Variables到一个被包含的layout</p>
+</blockquote>
+<p>Activity的XML<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</div><div class="line">    tools:context=&quot;.IncludeActivity&quot;&gt;</div><div class="line"></div><div class="line">	&lt;!-- 该页面需要用到的数据  --&gt;</div><div class="line">    &lt;data&gt;</div><div class="line">        &lt;variable</div><div class="line">            name=&quot;student&quot;</div><div class="line">            type=&quot;com.xtagwgj.dbindingsample.entity.Student&quot; /&gt;</div><div class="line"></div><div class="line">        &lt;variable</div><div class="line">            name=&quot;listener&quot;</div><div class="line">            type=&quot;android.view.View.OnClickListener&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;/data&gt;</div><div class="line"></div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line"></div><div class="line">		&lt;!-- include 页面 ，从这里传递数据到include的布局中  --&gt;</div><div class="line">		&lt;!-- app:listener 中的 listener 与 include页面中的变量名称相同  --&gt;</div><div class="line">        &lt;include</div><div class="line">            layout=&quot;@layout/include_view&quot;</div><div class="line">            app:listener=&quot;@&#123;listener&#125;&quot;</div><div class="line">            app:student=&quot;@&#123;student&#125;&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line">&lt;/layout&gt;</div></pre></td></tr></table></figure></p>
+<p>Include的 <code>XML</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;</div><div class="line"></div><div class="line">    &lt;data&gt;</div><div class="line"></div><div class="line">		&lt;!-- 接收传过来的变量数据  --&gt;</div><div class="line">        &lt;variable</div><div class="line">            name=&quot;student&quot;</div><div class="line">            type=&quot;com.xtagwgj.dbindingsample.entity.Student&quot; /&gt;</div><div class="line"></div><div class="line">        &lt;variable</div><div class="line">            name=&quot;listener&quot;</div><div class="line">            type=&quot;android.view.View.OnClickListener&quot; /&gt;</div><div class="line">    &lt;/data&gt;</div><div class="line"></div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;match_parent&quot;</div><div class="line">        android:gravity=&quot;center&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line"></div><div class="line">        &lt;TextView</div><div class="line">            android:layout_width=&quot;wrap_content&quot;</div><div class="line">            android:layout_height=&quot;wrap_content&quot;</div><div class="line">            android:onClick=&quot;@&#123;listener&#125;&quot;</div><div class="line">            android:padding=&quot;16dp&quot;</div><div class="line">            android:text=&apos;@&#123;student.money+&quot;&quot;&#125;&apos; /&gt;</div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line"></div><div class="line">&lt;/layout&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="ViewStubs"><a href="#ViewStubs" class="headerlink" title="ViewStubs"></a>ViewStubs</h2><blockquote>
+<p>ViewStubs跟正常的Views略有不同。他们开始时是不可见的，当他们要么设置为可见或被明确告知要载入时，它们通过载入另外一个layout取代了自己</p>
+<p>由于 <code>ViewStub</code> 基本上从View的层次结构上消失，在Binding对象的View也必须消失来允许被收集。因为Views是最后的，一个 <code>ViewStubProxy</code> 对象取带ViewStub，给开发者获得了ViewStub，当它存在以及还可以访问载入的View层次结构时当ViewStub已被载入时</p>
+<p>当载入另一个layout，为新的布局必需创建一个Binding。因此，<code>ViewStubProxy</code>必需监听ViewStub的 <code>OnInflateListener</code> 监听器并在那个时候建立Binding。因为只有一个可以存在， <code>ViewStubProxy</code> 允许开发者在其上设置一个 <code>OnInflateListener</code> 它会在建立Binding后调用</p>
+</blockquote>
+<p>先在xml中定义 <code>ViewStub</code> 如下</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 此处没有传入要使用的变量 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ViewStub</span></span></div><div class="line">          <span class="attr">android:id</span>=<span class="string">"@+id/view_stub"</span></div><div class="line">          <span class="attr">android:layout</span>=<span class="string">"@layout/stub_view"</span></div><div class="line">          <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">          <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> /&gt;</div></pre></td></tr></table></figure>
+<p>其中 <code>stub_view</code> 和普通的布局一样</p>
+<p>在获取到binding后，调用ViewStub的监听器监听ViewStub的改变<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在viewStub初始化的时候调用如下监听器</span></div><div class="line">       binding.viewStub.setOnInflateListener(ViewStub.OnInflateListener &#123; stub, inflated -&gt;</div><div class="line">           val viewBinding = DataBindingUtil.bind&lt;StubViewBinding&gt;(inflated)</div><div class="line"></div><div class="line">           viewBinding.stu = Student(<span class="number">222</span>)</div><div class="line">       &#125;)</div></pre></td></tr></table></figure></p>
+<p>在需要调用ViewStub的时候如下调用即可<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (!binding.viewStub.isInflated)</div><div class="line">       <span class="comment">//显示ViewStub的内容</span></div><div class="line">           binding.viewStub.viewStub.inflate()</div></pre></td></tr></table></figure></p>
+<h2 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h2><blockquote>
+<p>获取DataBinding： <code>DataBindingUtil.inflate(inflater, R.layout.homepage_fragment, container, false);</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> class ExamFragment : Fragment() &#123;</div><div class="line"></div><div class="line">    var binding: FragmentExamBinding? = null</div><div class="line"></div><div class="line">    val teacher = Teacher(3)</div><div class="line"></div><div class="line">    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View &#123;</div><div class="line"></div><div class="line">        if (binding == null) &#123;</div><div class="line">            binding = DataBindingUtil.inflate&lt;FragmentExamBinding&gt;(inflater, R.layout.fragment_exam, container, false)</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        binding?.teacher = teacher</div><div class="line"></div><div class="line">        return binding!!.root</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>fragment使用的布局与普通的DataBinding布局一样</p>
+<h2 id="RecyclerView"><a href="#RecyclerView" class="headerlink" title="RecyclerView"></a>RecyclerView</h2><p>先写一个 <code>item-list</code> 的子布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;&gt;</div><div class="line"></div><div class="line">    &lt;data&gt;</div><div class="line"></div><div class="line">        &lt;variable</div><div class="line">            name=&quot;stu&quot;</div><div class="line">            type=&quot;com.xtagwgj.dbindingsample.entity.Student&quot; /&gt;</div><div class="line"></div><div class="line">        &lt;variable</div><div class="line">            name=&quot;listener&quot;</div><div class="line">            type=&quot;android.view.View.OnClickListener&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;/data&gt;</div><div class="line"></div><div class="line">    &lt;LinearLayout</div><div class="line">        android:layout_width=&quot;match_parent&quot;</div><div class="line">        android:layout_height=&quot;wrap_content&quot;</div><div class="line">        android:orientation=&quot;vertical&quot;&gt;</div><div class="line"></div><div class="line">        &lt;TextView</div><div class="line">            android:layout_width=&quot;match_parent&quot;</div><div class="line">            android:layout_height=&quot;48dp&quot;</div><div class="line">            android:gravity=&quot;center&quot;</div><div class="line">            android:onClick=&quot;@&#123;listener&#125;&quot;</div><div class="line">            android:text=&quot;@&#123;String.valueOf(stu.id)&#125;&quot;</div><div class="line">            tools:text=&quot;test&quot; /&gt;</div><div class="line"></div><div class="line">    &lt;/LinearLayout&gt;</div><div class="line"></div><div class="line">&lt;/layout&gt;</div></pre></td></tr></table></figure>
+<p>其他的 <code>Activity</code> 和 <code>Adapter</code> 的代码（为了方便写在了一个文件内）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/**</div><div class="line"> * 示范RecyclerView的使用</div><div class="line"> * Created by xtagwgj on 2017/8/28.</div><div class="line"> */</div><div class="line">class ListActivity : AppCompatActivity() &#123;</div><div class="line"></div><div class="line">    private val studentList = mutableListOf&lt;Student&gt;()</div><div class="line"></div><div class="line">    override fun onCreate(savedInstanceState: Bundle?) &#123;</div><div class="line">        super.onCreate(savedInstanceState)</div><div class="line">        setContentView(R.layout.activity_list)</div><div class="line"></div><div class="line">        //添加n个数据 只是id不一样</div><div class="line">        (0..100).mapTo(studentList) &#123; Student(it.toLong()) &#125;</div><div class="line"></div><div class="line">        //显示数据</div><div class="line">        recycler.apply &#123;</div><div class="line">            layoutManager = LinearLayoutManager(this@ListActivity)</div><div class="line"></div><div class="line">            //其他代码</div><div class="line">        &#125;.adapter = MyAdapter(studentList)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 适配器</div><div class="line"> */</div><div class="line">open class MyAdapter(val datas: MutableList&lt;Student&gt;) : RecyclerView.Adapter&lt;MyAdapter.ViewHolder&gt;() &#123;</div><div class="line"></div><div class="line">    override fun getItemCount() = datas.size</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 实现了数据的绑定</div><div class="line">     * 和点击事件的监听</div><div class="line">     */</div><div class="line">    override fun onBindViewHolder(holder: MyAdapter.ViewHolder, position: Int) &#123;</div><div class="line"></div><div class="line">        //这里只是最简单的使用 ，实际情况可能比较复杂</div><div class="line">        holder.binding.stu = datas[position]</div><div class="line">        //点击输出log</div><div class="line">        holder.binding.listener = View.OnClickListener &#123;</div><div class="line">            Log.e(&quot;ClickAdapter&quot;, datas[position].toString())</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //。。。其他逻辑</div><div class="line"></div><div class="line">        //立即更新数据</div><div class="line">        holder.binding.executePendingBindings();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter.ViewHolder &#123;</div><div class="line">        val binding = DataBindingUtil.inflate&lt;ItemListBinding&gt;(LayoutInflater.from(parent.context),</div><div class="line">                R.layout.item_list, parent, false)</div><div class="line"></div><div class="line">        //直接传入ItemListBinding对象</div><div class="line">        return MyAdapter.ViewHolder(binding)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    //自定义的viewHolder，超类传view过去</div><div class="line">    open class ViewHolder(val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/DataBinding/" rel="tag"># DataBinding</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/26/DataBinding-2-简单的双向绑定/" rel="next" title="DataBinding(2)-简单的双向绑定">
+                <i class="fa fa-chevron-left"></i> DataBinding(2)-简单的双向绑定
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/28/DataBinding-4-常用注解说明/" rel="prev" title="DataBinding(4) 常用注解说明">
+                DataBinding(4) 常用注解说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODUyNS81MDk2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="xtagwgj" />
+          <p class="site-author-name" itemprop="name">xtagwgj</p>
+           
+              <p class="site-description motion-element" itemprop="description">命运负责洗牌，但是玩牌的却是我们自己！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#其他的用法"><span class="nav-number">1.</span> <span class="nav-text">其他的用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#include"><span class="nav-number">1.1.</span> <span class="nav-text">include</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ViewStubs"><span class="nav-number">1.2.</span> <span class="nav-text">ViewStubs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fragment"><span class="nav-number">1.3.</span> <span class="nav-text">Fragment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RecyclerView"><span class="nav-number">1.4.</span> <span class="nav-text">RecyclerView</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xtagwgj</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,混淆," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Android混淆代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta name="keywords" content="Android,混淆">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android混淆">
+<meta property="og:url" content="https://xtagwgj.github.io/2017/08/17/Android混淆/index.html">
+<meta property="og:site_name" content="Xtagwgj的个人博客">
+<meta property="og:description" content="Android混淆代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+<meta property="og:updated_time" content="2017-08-17T02:55:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android混淆">
+<meta name="twitter:description" content="Android混淆代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://xtagwgj.github.io/2017/08/17/Android混淆/"/>
+
+
+
+
+
+  <title>Android混淆 | Xtagwgj的个人博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xtagwgj的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://xtagwgj.github.io/2017/08/17/Android混淆/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xtagwgj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xtagwgj的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android混淆</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-17T09:43:06+08:00">
+                2017-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/源码/" itemprop="url" rel="index">
+                    <span itemprop="name">源码</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Android混淆代码"><a href="#Android混淆代码" class="headerlink" title="Android混淆代码"></a>Android混淆代码</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div></pre></td><td class="code"><pre><div class="line">#保持实体类</div><div class="line">-keep class com.xx.xxx.entity.** &#123;*;&#125;</div><div class="line"></div><div class="line">#保留类的成员</div><div class="line">-keepclassmembers class * implements java.io.Serializable &#123;</div><div class="line">    static final long serialVersionUID;</div><div class="line">    private static final java.io.ObjectStreamField[] serialPersistentFields;</div><div class="line">    !static !transient &lt;fields&gt;;</div><div class="line">    private void writeObject(java.io.ObjectOutputStream);</div><div class="line">    private void readObject(java.io.ObjectInputStream);</div><div class="line">    java.lang.Object writeReplace();</div><div class="line">    java.lang.Object readResolve();</div><div class="line">&#125;</div><div class="line"></div><div class="line">#标示无效代码，移除log</div><div class="line">-assumenosideeffects class android.util.Log &#123;</div><div class="line">    public static boolean isLoggable(java.lang.String, int);</div><div class="line">    public static int v(...);</div><div class="line">    public static int i(...);</div><div class="line">    public static int w(...);</div><div class="line">    public static int d(...);</div><div class="line">    public static int e(...);</div><div class="line">&#125;</div><div class="line"></div><div class="line">#BaseRecyclerViewAdapterHelper</div><div class="line">-keep class com.chad.library.adapter.** &#123;</div><div class="line">   *;</div><div class="line">&#125;</div><div class="line"></div><div class="line"># RxJava RxAndroid</div><div class="line">-dontwarn sun.misc.**</div><div class="line">-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* &#123;</div><div class="line">    long producerIndex;</div><div class="line">    long consumerIndex;</div><div class="line">&#125;</div><div class="line">-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef &#123;</div><div class="line">    rx.internal.util.atomic.LinkedQueueNode producerNode;</div><div class="line">&#125;</div><div class="line">-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef &#123;</div><div class="line">    rx.internal.util.atomic.LinkedQueueNode consumerNode;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#glide</div><div class="line">-keep class com.bumptech.glide.integration.okhttp.OkHttpGlideModule</div><div class="line">-keep public class * implements com.bumptech.glide.module.GlideModule</div><div class="line">-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** &#123;</div><div class="line">  **[] $VALUES;</div><div class="line">  public *;</div><div class="line">&#125;</div><div class="line"></div><div class="line">#fresco 防止该包下native类别优化时处理掉,运行奔溃</div><div class="line">-keep class com.facebook.imagepipeline.nativecode.**&#123;*;&#125;</div><div class="line">-keep class android.os.**&#123;*;&#125;</div><div class="line">-keep class com.facebook.**&#123;*;&#125;</div><div class="line">-dontwarn com.facebook.**</div><div class="line"></div><div class="line"># Realm</div><div class="line">-keep class io.realm.annotations.RealmModule</div><div class="line">-keep @io.realm.annotations.RealmModule class *</div><div class="line">-keep class io.realm.internal.Keep</div><div class="line">-keep @io.realm.internal.Keep class * &#123; *; &#125;</div><div class="line">-dontwarn javax.**</div><div class="line">-dontwarn io.realm.**</div><div class="line"></div><div class="line">#极光推送</div><div class="line">#-dontoptimize</div><div class="line">-dontpreverify</div><div class="line">-dontwarn cn.jpush.**</div><div class="line">-keep class cn.jpush.** &#123; *; &#125;</div><div class="line">-dontwarn cn.jiguang.**</div><div class="line">-keep class cn.jiguang.** &#123; *; &#125;</div><div class="line"></div><div class="line">#okhttputils</div><div class="line">-dontwarn com.zhy.http.**</div><div class="line">-keep class com.zhy.http.**&#123;*;&#125;</div><div class="line">-keep interface com.zhy.http.**&#123;*;&#125;</div><div class="line"></div><div class="line">#okhttp</div><div class="line">-dontwarn okhttp3.**</div><div class="line">-keep class okhttp3.**&#123;*;&#125;</div><div class="line">-keep interface okhttp3.**&#123;*;&#125;</div><div class="line">-keep class com.bumptech.glide.integration.okhttp3.OkHttpGlideModule</div><div class="line">-keep public class * implements com.bumptech.glide.module.GlideModule</div><div class="line"></div><div class="line">#okio</div><div class="line">-dontwarn okio.**</div><div class="line">-keep class okio.**&#123;*;&#125;</div><div class="line">-keep interface okio.**&#123;*;&#125;</div><div class="line"></div><div class="line">#Gson</div><div class="line">-keepattributes Signature</div><div class="line">-keepattributes *Annotation*</div><div class="line">-keep class sun.misc.Unsafe &#123; *; &#125;</div><div class="line">-keep class com.google.gson.stream.** &#123; *; &#125;</div><div class="line">-keep public class com.google.gson.**</div><div class="line">-keep public class com.google.gson.** &#123;public private protected *;&#125;</div><div class="line">-keep public class com.project.mocha_patient.login.SignResponseData &#123; private *; &#125;</div><div class="line"></div><div class="line">#mob sms</div><div class="line">-keep class android.net.http.SslError</div><div class="line">-keep class android.webkit.**&#123;*;&#125;</div><div class="line">-keep class cn.sharesdk.**&#123;*;&#125;</div><div class="line">-keep class cn.smssdk.**&#123;*;&#125;</div><div class="line">-keep class com.mob.**&#123;*;&#125;</div><div class="line"></div><div class="line">#bugly</div><div class="line">-dontwarn com.tencent.bugly.**</div><div class="line">-keep public class com.tencent.bugly.**&#123;*;&#125;</div><div class="line"></div><div class="line">#xg</div><div class="line">-keep public class * extends android.app.Service</div><div class="line">-keep public class * extends android.content.BroadcastReceiver</div><div class="line">-keep class com.tencent.android.tpush.**  &#123;* ;&#125;</div><div class="line">-keep class com.tencent.mid.**  &#123;* ;&#125;</div><div class="line">-dontwarn com.tencent.android.tpush.**</div><div class="line"></div><div class="line"></div><div class="line">#taobao</div><div class="line">-keep class com.taobao.api.**&#123;* ;&#125;</div><div class="line">-dontwarn com.taobao.api.**</div><div class="line">-keep class com.aliyun.api.**&#123;* ;&#125;</div><div class="line">-dontwarn com.aliyun.api.**</div><div class="line"></div><div class="line">#alipay</div><div class="line">-keep class com.alipay.android.app.IAlixPay&#123;*;&#125;</div><div class="line">-keep class com.alipay.android.app.IAlixPay$Stub&#123;*;&#125;</div><div class="line">-keep class com.alipay.android.app.IRemoteServiceCallback&#123;*;&#125;</div><div class="line">-keep class com.alipay.android.app.IRemoteServiceCallback$Stub&#123;*;&#125;</div><div class="line">-keep class com.alipay.sdk.app.PayTask&#123; public *;&#125;</div><div class="line">-keep class com.alipay.sdk.app.AuthTask&#123; public *;&#125;</div><div class="line"></div><div class="line">#youmeng</div><div class="line">-keepclassmembers class * &#123;</div><div class="line">   public &lt;init&gt; (org.json.JSONObject);</div><div class="line">&#125;</div><div class="line">-keep public class com.wisdomcommunity.android.R$*&#123;</div><div class="line">public static final int *;</div><div class="line">&#125;</div><div class="line">-keepclassmembers enum * &#123;</div><div class="line">    public static **[] values();</div><div class="line">    public static ** valueOf(java.lang.String);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">#通用的混淆代码</div><div class="line"></div><div class="line">-keepclasseswithmembernames class * &#123;</div><div class="line">    native &lt;methods&gt;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclasseswithmembers class * &#123;</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclasseswithmembers class * &#123;</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclassmembers class * extends android.app.Activity &#123;</div><div class="line">   public void *(android.view.View);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclassmembers enum * &#123;</div><div class="line">    public static **[] values();</div><div class="line">    public static ** valueOf(java.lang.String);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keep class * implements android.os.Parcelable &#123;</div><div class="line">  public static final android.os.Parcelable$Creator *;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"># 代码混淆压缩比，在0~7之间，默认为5，一般不做修改</div><div class="line">-optimizationpasses 5</div><div class="line"></div><div class="line"># 混合时不使用大小写混合，混合后的类名为小写</div><div class="line">-dontusemixedcaseclassnames</div><div class="line"></div><div class="line"># 指定不去忽略非公共库的类</div><div class="line">-dontskipnonpubliclibraryclasses</div><div class="line"></div><div class="line"># 这句话能够使我们的项目混淆后产生映射文件</div><div class="line"># 包含有类名-&gt;混淆后类名的映射关系</div><div class="line">-verbose</div><div class="line"></div><div class="line"># 指定不去忽略非公共库的类成员</div><div class="line">-dontskipnonpubliclibraryclassmembers</div><div class="line"></div><div class="line"># 不做预校验，preverify是proguard的四个步骤之一，Android不需要preverify，去掉这一步能够加快混淆速度。</div><div class="line">-dontpreverify</div><div class="line"></div><div class="line"># 保留Annotation不混淆</div><div class="line">-keepattributes *Annotation*,InnerClasses</div><div class="line"></div><div class="line"># 避免混淆泛型</div><div class="line">-keepattributes Signature</div><div class="line"></div><div class="line"># 抛出异常时保留代码行号</div><div class="line">-keepattributes SourceFile,LineNumberTable</div><div class="line"></div><div class="line"># 指定混淆是采用的算法，后面的参数是一个过滤器</div><div class="line"># 这个过滤器是谷歌推荐的算法，一般不做更改</div><div class="line">-optimizations !code/simplification/cast,!field/*,!class/merging/*</div><div class="line"></div><div class="line"></div><div class="line">#############################################</div><div class="line">#</div><div class="line"># Android开发中一些需要保留的公共部分</div><div class="line">#</div><div class="line">#############################################</div><div class="line"></div><div class="line"># 保留我们使用的四大组件，自定义的Application等等这些类不被混淆</div><div class="line"># 因为这些子类都有可能被外部调用</div><div class="line">-keep public class * extends android.app.Activity</div><div class="line">-keep public class * extends android.app.Appliction</div><div class="line">-keep public class * extends android.app.Service</div><div class="line">-keep public class * extends android.content.BroadcastReceiver</div><div class="line">-keep public class * extends android.content.ContentProvider</div><div class="line">-keep public class * extends android.app.backup.BackupAgentHelper</div><div class="line">-keep public class * extends android.preference.Preference</div><div class="line">-keep public class * extends android.view.View</div><div class="line">-keep public class com.android.vending.licensing.ILicensingService</div><div class="line"></div><div class="line"></div><div class="line"># 保留support下的所有类及其内部类</div><div class="line">-keep class android.support.** &#123;*;&#125;</div><div class="line"></div><div class="line"># 保留继承的</div><div class="line">-keep public class * extends android.support.v4.**</div><div class="line">-keep public class * extends android.support.v7.**</div><div class="line">-keep public class * extends android.support.annotation.**</div><div class="line"></div><div class="line"># 保留R下面的资源</div><div class="line">-keep class **.R$* &#123;*;&#125;</div><div class="line"></div><div class="line"># 保留本地native方法不被混淆</div><div class="line">-keepclasseswithmembernames class * &#123;</div><div class="line">    native &lt;methods&gt;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"># 保留在Activity中的方法参数是view的方法，</div><div class="line"># 这样以来我们在layout中写的onClick就不会被影响</div><div class="line">-keepclassmembers class * extends android.app.Activity&#123;</div><div class="line">    public void *(android.view.View);</div><div class="line">&#125;</div><div class="line"></div><div class="line"># 保留枚举类不被混淆</div><div class="line">-keepclassmembers enum * &#123;</div><div class="line">    public static **[] values();</div><div class="line">    public static ** valueOf(java.lang.String);</div><div class="line">&#125;</div><div class="line"></div><div class="line"># 保留我们自定义控件（继承自View）不被混淆</div><div class="line">-keep public class * extends android.view.View&#123;</div><div class="line">    *** get*();</div><div class="line">    void set*(***);</div><div class="line">    public &lt;init&gt;(android.content.Context);</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);</div><div class="line">&#125;</div><div class="line"></div><div class="line"># 对于带有回调函数的onXXEvent、**On*Listener的，不能被混淆</div><div class="line">-keepclassmembers class * &#123;</div><div class="line">    void *(**On*Event);</div><div class="line">    void *(**On*Listener);</div><div class="line">&#125;</div><div class="line"></div><div class="line"># webView处理，项目中没有使用到webView忽略即可</div><div class="line">-keepclassmembers class fqcn.of.javascript.interface.for.webview &#123;</div><div class="line">    public *;</div><div class="line">&#125;</div><div class="line">-keepclassmembers class * extends android.webkit.webViewClient &#123;</div><div class="line">    public void *(android.webkit.WebView, java.lang.String, android.graphics.Bitmap);</div><div class="line">    public boolean *(android.webkit.WebView, java.lang.String);</div><div class="line">&#125;</div><div class="line">-keepclassmembers class * extends android.webkit.webViewClient &#123;</div><div class="line">    public void *(android.webkit.webView, jav.lang.String);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/混淆/" rel="tag"># 混淆</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/16/Gradle配置/" rel="next" title="Gradle配置">
+                <i class="fa fa-chevron-left"></i> Gradle配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/17/Kotlin-集合/" rel="prev" title="Kotlin 集合">
+                Kotlin 集合 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODUyNS81MDk2"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="xtagwgj" />
+          <p class="site-author-name" itemprop="name">xtagwgj</p>
+           
+              <p class="site-description motion-element" itemprop="description">命运负责洗牌，但是玩牌的却是我们自己！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android混淆代码"><span class="nav-number">1.</span> <span class="nav-text">Android混淆代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xtagwgj</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
