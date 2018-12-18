@@ -47,6 +47,17 @@ android {
         resConfigs "xhdpi", "xxhdpi"
     }
 
+    //签名文件配置
+    signingConfigs {
+
+        release {
+            storeFile file("release.keystore")
+            storePassword "your keystore password"
+            keyAlias "your keystore alias"
+            keyPassword "your alias password"
+        }
+
+    }
 
 
     buildTypes {
@@ -126,18 +137,6 @@ android {
         flatDir {
             dirs 'aars' //就是你放aar的目录地址
         }
-    }
-
-    //签名文件配置
-    signinfConfigs {
-
-        release {
-            storeFile file("release.keystore")
-            storePassword "your keystore password"
-            keyAlias "your keystore alias"
-            keyPassword "your alias password"
-        }
-
     }
 
     //multiDex的一些相关配置，这样配置可以让你的编译速度更快
@@ -241,6 +240,8 @@ ext {
             flyco           : "2.1.2@aar",
     ]
 }
+
+//第三种方式，在gradle.properties中设置为key=value的形式；注意：value是string类型
 ```
 
 - 使用第一种方式，我们可以直接在gradle文件中如下依赖
@@ -275,3 +276,42 @@ dependencies {
  	compile "com.amitshekhar.android:android-networking:${libs.networking}"
  }
 ```
+
+- 使用第三种方式，我们可以直接在gradle文件中如下依赖
+```groovy
+  dependencies {
+    compile "com.amitshekhar.android:android-networking:${key}"
+ }
+```
+
+ ### 签名配置文件
+ 一般我们提交文件到git的时候，都不会上传local.properties这个文件，所以在这个文件你们我们可以放一些比较私密的东西，就比如账号、密码
+
+- local.properties
+```groovy
+#keystore的信息
+jksAlias=your keystore alias
+storePwd=your keystore password
+aliasPwd=your alias password
+jksFile=your file path
+```
+
+- 在build.gradle中做如下的配置
+```groovy
+
+    signingConfigs {
+        release {
+            //加载资源
+            Properties properties = new Properties()
+            InputStream inputStream = project.rootProject.file('local.properties').newDataInputStream();
+            properties.load(inputStream)
+
+            storeFile file(properties.getProperty('jksFile'))
+            storePassword properties.getProperty('storePwd')
+            keyAlias properties.getProperty('jksAlias')
+            keyPassword properties.getProperty('storePwd')
+        }
+    }
+
+```
+
